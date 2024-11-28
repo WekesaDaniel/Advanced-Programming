@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+//BankAccount.java
+
+>>>>>>> b243ed3 (First commit Assignment 1)
 package Lecture4_interfaces_abstract_classes;
 
 public class BankAccount {

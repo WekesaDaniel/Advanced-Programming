@@ -1,5 +1,6 @@
 package Lecture4_interfaces_abstract_classes;
 
+<<<<<<< HEAD
 import org.jetbrains.annotations.NotNull;
 
 import java.util.Calendar;
@@ -48,4 +49,43 @@ public abstract class BaseTransaction implements TransactionInterface {
     // Method to print a transaction receipt or details
     public abstract void printTransactionDetails();
     public abstract void apply(BankAccount ba);
+=======
+import java.util.Calendar;
+
+public class BaseTransaction implements TransactionInterface {
+    private final double amount;
+    private final Calendar date;
+    private final String transactionID;
+
+    public BaseTransaction(double amount, Calendar date) {
+        this.amount = amount;
+        this.date = (Calendar) date.clone();
+        this.transactionID = "TXN" + date.getTimeInMillis() + (int) (Math.random() * 10000);
+    }
+
+    @Override
+    public double getAmount() {
+        return amount;
+    }
+
+    @Override
+    public Calendar getDate() {
+        return (Calendar) date.clone();
+    }
+
+    @Override
+    public String getTransactionID() {
+        return transactionID;
+    }
+
+    @Override
+    public void printTransactionDetails() {
+        System.out.println("Transaction ID: " + transactionID + ", Amount: " + amount + ", Date: " + date.getTime());
+    }
+
+    @Override
+    public void apply(BankAccount ba) {
+        System.out.println("BaseTransaction apply method executed.");
+    }
+>>>>>>> b243ed3 (First commit Assignment 1)
 }

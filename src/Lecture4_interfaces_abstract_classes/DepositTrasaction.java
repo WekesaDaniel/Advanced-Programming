@@ -1,5 +1,6 @@
 package Lecture4_interfaces_abstract_classes;
 
+<<<<<<< HEAD
 import org.jetbrains.annotations.NotNull;
 
 import java.util.Calendar;
@@ -26,5 +27,29 @@ public class DepositTrasaction extends BaseTransaction {
         double curr_balance = ba.getBalance();
         double new_balance = curr_balance + getAmount();
         ba.setBalance(new_balance);
+=======
+import java.util.Calendar;
+
+public class DepositTransaction extends BaseTransaction {
+    public DepositTransaction(double amount, Calendar date) {
+        super(amount, date);
+    }
+
+    @Override
+    public void apply(BankAccount ba) {
+        if (getAmount() <= 0) {
+            System.out.println("Deposit amount must be positive.");
+            return;
+        }
+        double newBalance = ba.getBalance() + getAmount();
+        ba.setBalance(newBalance);
+        System.out.println("Deposit successful. New balance: " + newBalance);
+    }
+
+    @Override
+    public void printTransactionDetails() {
+        System.out.println("Deposit Transaction: ");
+        super.printTransactionDetails();
+>>>>>>> b243ed3 (First commit Assignment 1)
     }
 }

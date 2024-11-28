@@ -1,4 +1,5 @@
 package Lecture4_interfaces_abstract_classes;
+<<<<<<< HEAD
 import java.util.Calendar;
 
 /**
@@ -16,6 +17,17 @@ public interface TransactionInterface {
     // Method to get a unique identifier for the transaction
     String getTransactionID();
 
+=======
+
+import java.util.Calendar;
+
+public interface TransactionInterface {
+    double getAmount();
+    Calendar getDate();
+    String getTransactionID();
+    void printTransactionDetails();
+    void apply(BankAccount ba);
+>>>>>>> b243ed3 (First commit Assignment 1)
 }
 
 
